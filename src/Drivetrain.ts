@@ -21,11 +21,11 @@ export class Drivetrain {
     omega_wheel: number = 0;
     
     /* Inertia of geartrain + drive shaft [kg m2] */
-    inertia = 0.1 + 0.05; /* 0.5 * MR^2 */
-    damping = 12;
-    compliance = 0.01;
+    inertia = 0.17 + 0.08; // total 0.25/* 0.5 * MR^2 */
+    damping = 15;
+    compliance = 0.015;
 
-    shiftTime = 50;
+    shiftTime = 150;
 
     constructor() {
         this.init();
