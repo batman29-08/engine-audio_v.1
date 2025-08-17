@@ -19,9 +19,10 @@ export class Engine {
     #last_limiter = 0;
 
     /* Torque curves */
-    torque = 400; // Nm
-    engine_braking = 200;
-    throttle = 0;
+    torque = 650;         // big mid-range punch
+engine_braking = 250; // aggressive slowdown on lift-off (street racer feel)
+redline = 9500;       // let it rev higher for that screaming pull
+
 
     /* Integration state */
     theta: number = 0;
