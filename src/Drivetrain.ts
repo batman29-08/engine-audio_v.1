@@ -8,8 +8,9 @@ export class Drivetrain {
     downShift = false;
 
     // gears = [3.17, 2.36, 1.80, 1.47, 1.24, 1.11];
-    gears = [3.4, 2.36, 1.85, 1.47, 1.24, 1.07];
-    final_drive = 3.44;
+   gears = [3.40, 2.36, 1.85, 1.47, 1.24, 1.07, 0.93, 0.82];
+   final_drive = 3.44;
+
 
     theta: number = 0;
     omega: number = 0;
