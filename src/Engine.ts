@@ -19,9 +19,10 @@ export class Engine {
     #last_limiter = 0;
 
     /* Torque curves */
-    torque = 650;         // big mid-range punch
-engine_braking = 250; // aggressive slowdown on lift-off (street racer feel)
-redline = 9500;       // let it rev higher for that screaming pull
+    torque = 650;
+engine_braking = 90;
+redline = 9500;
+     // let it rev higher for that screaming pull
 
 
     /* Integration state */
@@ -126,9 +127,10 @@ redline = 9500;       // let it rev higher for that screaming pull
         // this.omega += this.getCorrection(dv, h, 0.0);
 
         // const damping = 1 + 1 * Math.pow(drivetrain.gear, 2);
-        let damping = 12;
-        if (drivetrain.gear > 3)
-            damping = 9;
+        let damping = 5; // slower response in low gears
+if (drivetrain.gear > 3)
+    damping = 3; // slower response in high gears
+
 
         this.omega += (drivetrain.omega - this.omega) * damping * h;
     }
